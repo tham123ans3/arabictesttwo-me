@@ -2,6 +2,8 @@ import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import FullScreenLayout  from './FullScreenLayout';
 import TopSaveLoadCtrl from './TopSaveLoadCtrl'
+import GoogleSignInButton from './GoogleSignInButton';
+import GoogleAppSignInButton from './GoogleAppSignInButton';
 
 const TestingPoint  = () => {
   
@@ -9,8 +11,10 @@ const TestingPoint  = () => {
         <View style={[
             styles.container,
             ]}>
-          <TopSaveLoadCtrl/>
+          <GoogleSignInButton/>
+          <GoogleAppSignInButton/>
           <FullScreenLayout/>
+          <TopSaveLoadCtrl/>
         </View>
             
        

@@ -1,4 +1,4 @@
-package com.arabictesttwo;
+package com.arabicthameem.arabicpracticetwo;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;

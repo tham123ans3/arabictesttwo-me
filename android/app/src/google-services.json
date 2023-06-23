@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "171834861504",
+    "project_id": "arabicpracticetwo",
+    "storage_bucket": "arabicpracticetwo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:171834861504:android:59ad325ef8168220070a25",
+        "android_client_info": {
+          "package_name": "com.arabicthameem.arabicpracticetwo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "171834861504-6bjdqa2jairf9soo09lr943ilfk4auk9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.arabicthameem.arabicpracticetwo",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "171834861504-cao2u77o4t8me8d7kdcuo7ep4nqm9gmk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDM6amAC0DTzEEiOQgPul7y5_kAK25dsHY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "171834861504-cao2u77o4t8me8d7kdcuo7ep4nqm9gmk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

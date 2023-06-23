@@ -1,4 +1,4 @@
-package com.arabictesttwo;
+package com.arabicthameem.arabicpracticetwo;
 
 import android.app.Application;
 import com.facebook.react.PackageList;
