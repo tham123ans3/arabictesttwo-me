@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>171834861504-popt7b4i0ofq076l39gkhnhrvtcm3nfg.apps.googleusercontent.com</string>
+	<string>171834861504-7eatrji5i49i7nc4g071e2ctj3u226o6.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.171834861504-popt7b4i0ofq076l39gkhnhrvtcm3nfg</string>
+	<string>com.googleusercontent.apps.171834861504-7eatrji5i49i7nc4g071e2ctj3u226o6</string>
 	<key>ANDROID_CLIENT_ID</key>
 	<string>171834861504-6bjdqa2jairf9soo09lr943ilfk4auk9.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
@@ -15,7 +15,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.arabictesttwo</string>
+	<string>org.reactjs.native.example.arabictesttwo</string>
 	<key>PROJECT_ID</key>
 	<string>arabicpracticetwo</string>
 	<key>STORAGE_BUCKET</key>
@@ -31,6 +31,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:171834861504:ios:ffcd8ee31611516e070a25</string>
+	<string>1:171834861504:ios:633fda4fd12f8d22070a25</string>
 </dict>
 </plist>
