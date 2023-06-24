@@ -3,8 +3,7 @@ import {View, Text, StyleSheet, Platform} from 'react-native';
 import FullScreenLayout  from './FullScreenLayout';
 import TopSaveLoadCtrl from './TopSaveLoadCtrl'
 import GoogleSignInButton from './GoogleSignInButton';
-//import GoogleAppSignInButton from './GoogleAppSignInButton';
-
+import GoogleAppSignInButton from './GoogleAppSignInButton';
 
 const TestingPoint  = () => {
   
@@ -13,6 +12,7 @@ const TestingPoint  = () => {
             styles.container,
             ]}>
           <GoogleSignInButton/>
+          <GoogleAppSignInButton/>
           <FullScreenLayout/>
           <TopSaveLoadCtrl/>
         </View>
