@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { View, Button, Text } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Button, Text, useColorScheme } from 'react-native';
 import { initializeApp } from 'firebase/app';
-import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from 'firebase/auth';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDriYHR51Ub9aVBZtgzcQJ1kmPJGra7h_4",
@@ -12,29 +12,49 @@ const firebaseConfig = {
   appId: "1:171834861504:web:026ba6b075f441f4070a25"
 };
 
-const app = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 
 const GoogleSignInButton = () => {
-  const [userInfo, setUserInfo] = useState(null);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const auth = getAuth();
+    const unsubscribe = onAuthStateChanged(auth, setUser);
+    return unsubscribe;
+  }, []);
 
   const signIn = async () => {
     try {
       const provider = new GoogleAuthProvider();
       const auth = getAuth();
-      const result = await signInWithPopup(auth, provider);
-      setUserInfo(result.user);
+      await signInWithPopup(auth, provider);
     } catch (error) {
       console.log(error);
     }
   };
 
+  const handleSignOut = async () => {
+    const auth = getAuth();
+    try {
+      await signOut(auth);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const colorScheme = useColorScheme();
+  const textColor = colorScheme === 'light' ? 'black' : 'white';
+
   return (
     <View>
-      <Text>adfsdfsd</Text>
-      <Text>adfsdfsd</Text>
-      <Text>adfsdfsd</Text>
-      <Text>adfsdfsd</Text>
-      <Button onPress={signIn} title="Login with Google" />
+      {user ? (
+        <>
+          <Text style={{color: 'red'}}>Welcome, {user.displayName || user.email}!</Text>
+          <Button onPress={handleSignOut} title="Sign Out" />
+        </>
+      ) : (
+        <Button onPress={signIn} title="Login with Google" />
+      )}
     </View>
   );
 };

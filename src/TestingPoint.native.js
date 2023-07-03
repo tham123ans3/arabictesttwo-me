@@ -2,20 +2,19 @@ import React from 'react';
 import {View, Text, StyleSheet, Platform} from 'react-native';
 import FullScreenLayout  from './FullScreenLayout';
 import TopSaveLoadCtrl from './TopSaveLoadCtrl'
-import GoogleSignInButton from './GoogleSignInButton';
 import GoogleAppSignInButton from './GoogleAppSignInButton';
+import { SafeAreaView} from 'react-native';
 
 const TestingPoint  = () => {
   
     return (
-        <View style={[
+        <SafeAreaView style={[
             styles.container,
             ]}>
-          <GoogleSignInButton/>
           <GoogleAppSignInButton/>
           <FullScreenLayout/>
           <TopSaveLoadCtrl/>
-        </View>
+        </SafeAreaView>
             
        
     );
