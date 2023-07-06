@@ -207,7 +207,7 @@ const WriteComp2 = ({ id, updateComponentPositionKey, setScrollEnabled }) => {
 
         updateComponentPosition();
 
-      }, [containerWidth, containerHeight, path, updateComponentPosition, updateComponentPositionKey]);
+      }, [containerWidth, containerHeight, path, updateComponentPosition, updateComponentPositionKey, setScrollEnabled]);
 
       useEffect(() => {
         console.log(id + ' --> WriteComp2.useEffect[id] CALLED ONCE ONCE ONCE ONCE ONCE ONCE ONCE ONCE ONCE ONCE ONCE ONCE ONCE ONCE ONCE ONCE ONCE ONCE ONCE ONCE ONCE ONCE ONCE ONCE ONCE ONCE ')
