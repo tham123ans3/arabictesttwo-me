@@ -13,7 +13,7 @@ var test = 1;
 //this is third commit
 //this is fourth commit
 
-const WriteComp2 = ({ id, updateComponentPositionKey }) => {
+const WriteComp2 = ({ id, updateComponentPositionKey, setScrollEnabled }) => {
 
     const [path, setPath] = useState('');
     const [scrolled1, setScrolled1] = useState(0);
@@ -83,8 +83,20 @@ const WriteComp2 = ({ id, updateComponentPositionKey }) => {
 
       useEffect(() => {
         panResponder.current = PanResponder.create({
-          onStartShouldSetPanResponder: () => true,
+          onStartShouldSetPanResponder: () => {
+            console.log('PanResponder has started.');
+            setScrollEnabled(false)
+            return true;
+          },
           onMoveShouldSetPanResponder: () => true,
+          onStartShouldSetResponder:  () => {setScrollEnabled(false); true;},
+          onPanResponderRelease: () => {
+            console.log('PanResponder has released.');
+            setScrollEnabled(true)
+            return true;
+          },
+
+
           onPanResponderGrant: (evt) => {
             const touch = evt.nativeEvent;
             // Handle your tap event here
@@ -113,7 +125,7 @@ const WriteComp2 = ({ id, updateComponentPositionKey }) => {
 
           },
           onPanResponderEnd: (evt, gestureState) => {
-            //console.log('onPanResponderEnd');
+            console.log('onPanResponderEnd');
             startOfTap = true;
           },
 //          onResponderTerminationRequest: () => false,

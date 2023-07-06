@@ -8,10 +8,12 @@ import WriteComp2 from './WriteComp2';
 const FullScreenLayout = () => {
 
     const [scrollCounter, setScrollCounter] = useState(0);
+    const [isScrollEnabled, setScrollEnabled] = useState(true);
 
+    FullScreenLayout
     const handleScroll = () => {
         // Logic to handle scroll
-        console.log('Parent scroll called');
+        console.log('Parent scroll called', scrollCounter);
         setScrollCounter((prevScrollCounter) => prevScrollCounter + 1);
       };
 
@@ -22,11 +24,12 @@ const FullScreenLayout = () => {
   return (
     <View style={styles.container}>
       {/*<View style={[styles.view, { backgroundColor: 'red' }]} />*/}
-      <ScrollView contentContainerStyle={styles.scrollViewContent} onScroll={handleScroll}
+      <ScrollView contentContainerStyle={styles.scrollViewContent} onScroll={handleScroll} scrollEnabled={isScrollEnabled}
         scrollEventThrottle={16}>
         {writeComp2Ids.map((id, index) => (
         <View key={id} style={[styles.view ]}> 
-            <WriteComp2 id={id} updateComponentPositionKey={scrollCounter} />
+            <WriteComp2 id={id} updateComponentPositionKey={scrollCounter} 
+            setScrollEnabled={setScrollEnabled}/>
         </View>
         ))}
       </ScrollView>
