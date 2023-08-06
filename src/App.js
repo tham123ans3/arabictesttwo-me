@@ -12,13 +12,14 @@ import Flex from './Flex';
 import FullScreenLayout from './FullScreenLayout';
 import StartingPoint from './StartingPoint';
 import TestingPoint from './TestingPoint';
+import TestingPointEmail from './TestingPointEmail';
 
 const App = () => {
   return (
     <View style={[
       styles.container,
       ]}>
-      <TestingPoint/>
+      <TestingPointEmail/>
     </View>
   );
 };

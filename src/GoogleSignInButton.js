@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Button, Text, useColorScheme } from 'react-native';
 import { initializeApp } from 'firebase/app';
 import { GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged, getAuth } from 'firebase/auth';
-import { app } from "./Firebase";
+//import { app } from "./Firebase";
 
 const GoogleSignInButton = () => {
   const [user, setUser] = useState(null);

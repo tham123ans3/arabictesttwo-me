@@ -5,9 +5,11 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { doc, getDoc } from "firebase/firestore";
 import { collection, getDocs } from "firebase/firestore";
-import { app } from "./Firebase";
+//import { app } from "./Firebase";
 import { getAuth, onAuthStateChanged  } from "firebase/auth";
 import { showAlert } from './utility'; 
+
+import {getApp} from "firebase/app";
 
 //import "firebase/firestore";
 
@@ -51,6 +53,7 @@ const TopSaveLoadCtrl = () => {
         console.log("check db access");
 
         try {
+        const app = getApp();
         const db = getFirestore(app);
         const auth = getAuth(app);
         const user = auth.currentUser;
